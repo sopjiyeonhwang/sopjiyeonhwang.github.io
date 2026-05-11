@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biography — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="biography">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Biography</div>
+    <h1 class="serif">Dr. Jiyeon <span class="italic">Hwang</span></h1>
+    <hr class="rule center" />
+    <p class="lede" data-bind="biography.lede">Korean lyric coloratura soprano · recitalist · opera singer · voice faculty.</p>
+  </section>
+
+  <section class="page" style="padding: 24px 0 96px;">
+    <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start;">
+      <div>
+        <div class="imgslot portrait">
+          <span class="tag">BIO PORTRAIT · images/bio-portrait.jpg</span>
+        </div>
+        <dl class="facts" style="margin-top: 40px; grid-template-columns: 1fr;" data-bio-facts></dl>
+      </div>
+      <article class="prose" data-bio-body>
+        <p>Loading biography…</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+(async () => {
+  const bio = await Site.loadJSON('content/biography.json');
+  if (!bio) return;
+  document.querySelectorAll('[data-bind]').forEach(el => {
+    const path = el.dataset.bind.split('.');
+    let v = { biography: bio };
+    for (const p of path) v = v?.[p];
+    if (v != null) el.innerHTML = v;
+  });
+  const body = document.querySelector('[data-bio-body]');
+  if (body) body.innerHTML = bio.body_html || '';
+  const facts = document.querySelector('[data-bio-facts]');
+  if (facts && bio.facts) {
+    facts.innerHTML = bio.facts.map(f => `<dt>${f.label}</dt><dd>${f.value}</dd>`).join('');
+  }
+})();
+</script>
+</body>
+</html>

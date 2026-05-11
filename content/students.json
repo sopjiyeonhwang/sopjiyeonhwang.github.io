@@ -1,0 +1,10 @@
+{
+  "student_achievements": [
+    { "year": "2025", "student": "Maria González", "achievement": "First Prize", "context": "NATS Region Texoma Auditions — Lower College Women" },
+    { "year": "2025", "student": "Daniel Ortiz", "achievement": "Admitted (M.M. Voice Performance)", "context": "Manhattan School of Music" },
+    { "year": "2024", "student": "Sophia Reyes", "achievement": "Encouragement Award", "context": "NATS National Student Auditions" },
+    { "year": "2024", "student": "Andrés Martínez", "achievement": "Admitted (B.M. Voice)", "context": "University of Minnesota School of Music" },
+    { "year": "2024", "student": "Laura Chen", "achievement": "Semi-finalist", "context": "Forte International Vocal Competition" },
+    { "year": "2023", "student": "TAMIU Opera Workshop", "achievement": "Featured performance", "context": "Texas Music Educators Association Convention" }
+  ]
+}

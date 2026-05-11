@@ -1,0 +1,52 @@
+{
+  "instagram_handle": "jiyeonhwang",
+  "events": [
+    {
+      "name": "Carnegie Recital Debut",
+      "date": "2022-11-12",
+      "venue": "Weill Recital Hall, Carnegie Hall · New York, NY",
+      "description": "Solo recital debut featuring works by Donizetti, Bellini, and Korean art song.",
+      "images": [
+        { "src": "", "alt": "On stage at Weill", "size": "w8 h-md", "caption": "On stage" },
+        { "src": "", "alt": "Curtain call", "size": "w4 h-md", "caption": "Curtain call" },
+        { "src": "", "alt": "Backstage portrait", "size": "w4 h-lg", "caption": "Backstage" },
+        { "src": "", "alt": "Program note", "size": "w4 h-sm", "caption": "Program" },
+        { "src": "", "alt": "Reception", "size": "w4 h-sm", "caption": "Reception" }
+      ]
+    },
+    {
+      "name": "L'elisir d'amore — Adina",
+      "date": "2024-03-15",
+      "venue": "TAMIU Opera Workshop · Laredo, TX",
+      "description": "Staged production of Donizetti's beloved comic opera.",
+      "images": [
+        { "src": "", "alt": "Act II finale", "size": "w6 h-md", "caption": "Act II finale" },
+        { "src": "", "alt": "Adina aria", "size": "w6 h-md", "caption": "Prendi, per me sei libero" },
+        { "src": "", "alt": "With Nemorino", "size": "w4 h-md", "caption": "Duet" },
+        { "src": "", "alt": "Costume detail", "size": "w8 h-md", "caption": "Costume" }
+      ]
+    },
+    {
+      "name": "Chung-Ang Masterclass",
+      "date": "2024-08-04",
+      "venue": "Chung-Ang University · Seoul, South Korea",
+      "description": "Masterclass for voice students at Dr. Hwang's alma mater.",
+      "images": [
+        { "src": "", "alt": "Teaching", "size": "w6 h-md", "caption": "Teaching a student" },
+        { "src": "", "alt": "Group photo", "size": "w6 h-md", "caption": "With the class" },
+        { "src": "", "alt": "Demonstration", "size": "w4 h-lg", "caption": "Demonstration" },
+        { "src": "", "alt": "Faculty visit", "size": "w8 h-md", "caption": "With faculty" }
+      ]
+    },
+    {
+      "name": "NATSAA New York · William Vernad Award",
+      "date": "2022-01-22",
+      "venue": "National Round · New York, NY",
+      "description": "Award winner at the National Association of Teachers of Singing Artist Auditions.",
+      "images": [
+        { "src": "", "alt": "Performing", "size": "w8 h-md", "caption": "Performing" },
+        { "src": "", "alt": "Award ceremony", "size": "w4 h-md", "caption": "Award ceremony" }
+      ]
+    }
+  ]
+}

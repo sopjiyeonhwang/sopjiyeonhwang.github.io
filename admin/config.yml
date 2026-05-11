@@ -1,0 +1,220 @@
+# Decap CMS configuration for Dr. Jiyeon Hwang's site
+# Docs: https://decapcms.org/docs/
+
+# ------------------------------------------------------------------
+# BACKEND — GitHub
+# ------------------------------------------------------------------
+# GitHub Pages doesn't ship an OAuth proxy, so you need one of these:
+#
+#  (A) Easiest — use https://decapbridge.com (free for personal sites)
+#      Set: backend.name: git-gateway  (uncomment the git-gateway block)
+#      and follow their 5-minute setup.
+#
+#  (B) Self-hosted — deploy https://github.com/vencax/netlify-cms-github-oauth-provider
+#      to Vercel/Render (free) and set base_url + auth_endpoint below.
+#
+# Replace YOUR-USERNAME / YOUR-REPO before going live.
+
+backend:
+  name: github
+  repo: YOUR-USERNAME/YOUR-REPO         # e.g. jiyeon-hwang/jiyeon-hwang.github.io
+  branch: main
+  # Uncomment + fill these in once you deploy an OAuth proxy:
+  # base_url: https://your-oauth-proxy.vercel.app
+  # auth_endpoint: /auth
+
+# ------------------------------------------------------------------
+# MEDIA — images go into /images/
+# ------------------------------------------------------------------
+media_folder: "images"
+public_folder: "/images"
+
+# ------------------------------------------------------------------
+# SITE PUBLISH URL (shown in the admin "View live" link)
+# ------------------------------------------------------------------
+site_url: https://YOUR-USERNAME.github.io
+display_url: https://YOUR-USERNAME.github.io
+logo_url: ""
+
+# ------------------------------------------------------------------
+# COLLECTIONS
+# ------------------------------------------------------------------
+collections:
+
+  # ----- Single-file pages (settings, hero text, bio prose, etc) -----
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "site"
+        label: "Site settings (name, email, social)"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { name: name, label: "Display name", widget: string }
+          - { name: tagline, label: "Tagline (footer)", widget: text }
+          - { name: contact_form_endpoint, label: "Contact form endpoint (Formspree URL)", widget: string, required: false, hint: "Paste your Formspree endpoint, e.g. https://formspree.io/f/xxxx — messages will go to whatever email you registered with Formspree. Leave empty to disable form sending." }
+          - { name: show_management, label: "Show management block?", widget: boolean, default: false }
+          - { name: management, label: "Management note", widget: string, required: false }
+          - name: social
+            label: "Social links"
+            widget: list
+            fields:
+              - { name: label, label: Platform, widget: string }
+              - { name: url, label: URL, widget: string }
+
+      - name: "home"
+        label: "Home page"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow text", widget: string }
+          - { name: name_first, label: "First name", widget: string }
+          - { name: name_last, label: "Last name", widget: string }
+          - { name: tagline, label: "Hero tagline (italic quote)", widget: text }
+          - { name: show_press_quote, label: "Show press quote section?", widget: boolean, default: false }
+          - { name: press_quote, label: "Press quote", widget: text, required: false }
+          - { name: press_quote_attr, label: "Press quote attribution", widget: string, required: false }
+          - { name: intro_short, label: "Short intro (about teaser)", widget: text }
+
+      - name: "biography"
+        label: "Biography"
+        file: "content/biography.json"
+        format: "json"
+        fields:
+          - { name: lede, label: "Lede (italic intro)", widget: string }
+          - { name: body_html, label: "Bio body (HTML)", widget: markdown }
+          - name: facts
+            label: "Quick facts"
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+
+      - name: "teaching"
+        label: "Teaching"
+        file: "content/teaching.json"
+        format: "json"
+        fields:
+          - { name: lede, label: "Lede", widget: string }
+          - { name: body_html, label: "Teaching body (HTML)", widget: markdown }
+          - name: courses
+            label: "Courses taught"
+            widget: list
+            fields:
+              - { name: title, label: Course title, widget: string }
+              - { name: desc, label: Description, widget: text }
+          - name: studio_info
+            label: "Studio info"
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+
+      - name: "students"
+        label: "Student achievements"
+        file: "content/students.json"
+        format: "json"
+        fields:
+          - name: student_achievements
+            label: "Achievements"
+            label_singular: "Achievement"
+            widget: list
+            summary: "{{fields.year}} — {{fields.student}}"
+            fields:
+              - { name: year, label: Year, widget: string }
+              - { name: student, label: Student, widget: string }
+              - { name: achievement, label: Achievement, widget: string }
+              - { name: context, label: Context, widget: string }
+
+      - name: "media"
+        label: "Media (audio + video)"
+        file: "content/media.json"
+        format: "json"
+        fields:
+          - name: videos
+            label: "YouTube videos"
+            widget: list
+            fields:
+              - { name: youtube_id, label: "YouTube video ID", widget: string, hint: "e.g. dQw4w9WgXcQ — the part after v= in the URL" }
+              - { name: title, label: Title, widget: string }
+              - { name: meta, label: "Meta (composer, year, etc)", widget: string }
+          - name: audio
+            label: "Audio tracks"
+            widget: list
+            required: false
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: meta, label: Meta, widget: string }
+              - { name: duration, label: Duration, widget: string, required: false }
+
+      - name: "gallery"
+        label: "Gallery (events)"
+        file: "content/gallery.json"
+        format: "json"
+        fields:
+          - { name: instagram_handle, label: "Instagram handle (no @)", widget: string, required: false }
+          - name: events
+            label: "Events"
+            label_singular: "Event"
+            widget: list
+            summary: "{{fields.date}} — {{fields.name}}"
+            fields:
+              - { name: name, label: "Event name", widget: string, hint: "e.g. 'L'elisir d'amore — Adina' or 'Chung-Ang Masterclass'" }
+              - { name: date, label: "Event date", widget: datetime, time_format: false }
+              - { name: venue, label: "Venue / location", widget: string, required: false }
+              - { name: description, label: "Short description", widget: text, required: false }
+              - name: images
+                label: "Photos"
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - { name: src, label: Image, widget: image }
+                  - { name: alt, label: "Alt text / short caption", widget: string }
+                  - name: size
+                    label: "Tile size"
+                    widget: select
+                    options:
+                      - { label: "Wide · short",      value: "w8 h-md" }
+                      - { label: "Wide · tall",       value: "w6 h-lg" }
+                      - { label: "Medium · square",   value: "w6 h-md" }
+                      - { label: "Small · square",    value: "w4 h-md" }
+                      - { label: "Small · short",     value: "w4 h-sm" }
+                      - { label: "Small · portrait",  value: "w4 h-lg" }
+                    default: "w4 h-md"
+                  - { name: caption, label: Caption, widget: string, required: false }
+
+  # ----- Performances (separate collection so add/remove is easy) -----
+  - name: "performances"
+    label: "Performances"
+    files:
+      - name: "schedule"
+        label: "Upcoming & past performances"
+        file: "content/performances.json"
+        format: "json"
+        fields:
+          - name: upcoming
+            label: "Upcoming"
+            widget: list
+            fields:
+              - { name: date, label: Date, widget: datetime, time_format: false }
+              - { name: title, label: Title, widget: string }
+              - { name: role, label: "Role / program", widget: string }
+              - { name: venue, label: Venue, widget: string }
+              - { name: city, label: City, widget: string }
+              - { name: ticket_url, label: "Ticket URL", widget: string, required: false }
+          - name: past
+            label: "Past performances"
+            widget: list
+            fields:
+              - { name: date, label: Date, widget: datetime, time_format: false }
+              - { name: title, label: Title, widget: string }
+              - { name: role, label: "Role / program", widget: string }
+              - { name: venue, label: Venue, widget: string }
+              - { name: city, label: City, widget: string }
+          - name: repertoire
+            label: "Operatic repertoire"
+            widget: list
+            fields:
+              - { name: role, label: Role, widget: string }
+              - { name: opera, label: Opera, widget: string }
+              - { name: composer, label: Composer, widget: string }

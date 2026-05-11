@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Performances — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="performances">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Calendar</div>
+    <h1 class="serif">Performances</h1>
+    <hr class="rule center" />
+    <p class="lede">Recitals, opera, and concert performances — 2026 season and select past engagements.</p>
+  </section>
+
+  <section class="page" style="padding-bottom: 72px;">
+    <div class="section-head">
+      <h2 class="serif">Upcoming</h2>
+      <span class="eyebrow ink">2026 Season</span>
+    </div>
+    <div data-upcoming></div>
+  </section>
+
+  <section class="page" style="padding-bottom: 88px;">
+    <div class="section-head">
+      <h2 class="serif">Selected past performances</h2>
+    </div>
+    <div data-past></div>
+  </section>
+
+  <section class="page" style="padding-bottom: 96px;">
+    <div class="section-head">
+      <h2 class="serif">Operatic repertoire</h2>
+    </div>
+    <div data-rep style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0 48px;"></div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+function row(p, past) {
+  return `
+    <div class="perf-row ${past ? 'past' : ''}">
+      <div>
+        <div class="date">${Site.fmtDate(p.date)}</div>
+        <div class="year">${Site.fmtYear(p.date)}</div>
+      </div>
+      <div>
+        <div class="title">${p.title}</div>
+        <div class="role">${p.role || ''}</div>
+      </div>
+      <div class="venue-col">
+        <div class="venue">${p.venue || ''}</div>
+        <div class="city">${p.city || ''}</div>
+      </div>
+      <div class="ticket">${past ? '' : (p.ticket_url ? `<a href="${p.ticket_url}" target="_blank" rel="noopener">Tickets →</a>` : 'TBA')}</div>
+    </div>
+  `;
+}
+(async () => {
+  const p = await Site.loadJSON('content/performances.json');
+  if (!p) return;
+  document.querySelector('[data-upcoming]').innerHTML = (p.upcoming || []).map(x => row(x, false)).join('');
+  document.querySelector('[data-past]').innerHTML = (p.past || []).map(x => row(x, true)).join('');
+  document.querySelector('[data-rep]').innerHTML = (p.repertoire || []).map(r => `
+    <div style="padding: 14px 0; border-bottom: 1px solid var(--c-line-soft); display: flex; justify-content: space-between; align-items: baseline;">
+      <div class="serif italic" style="font-size: 22px;">${r.role}</div>
+      <div style="font-size: 12px; color: var(--c-mute); text-align: right;">
+        <div>${r.opera}</div>
+        <div style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-gold); margin-top: 2px;">${r.composer || ''}</div>
+      </div>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>

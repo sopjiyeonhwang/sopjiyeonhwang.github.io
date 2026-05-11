@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teaching — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="teaching">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Studio &amp; Faculty</div>
+    <h1 class="serif">Teaching</h1>
+    <hr class="rule center" />
+    <p class="lede" data-bind="teaching.lede">Voice studio at Texas A&amp;M International University. Applied Voice, Song Literature, Voice Methods, Opera Workshop, and Choir.</p>
+  </section>
+
+  <section class="page" style="padding: 24px 0 88px;">
+    <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start;">
+      <div class="imgslot portrait">
+        <span class="tag">TEACHING · images/teaching.jpg</span>
+      </div>
+      <article class="prose" data-bio-body></article>
+    </div>
+  </section>
+
+  <section class="page" style="padding-bottom: 88px;">
+    <div class="section-head">
+      <h2 class="serif">Courses taught</h2>
+    </div>
+    <div data-courses style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px;"></div>
+  </section>
+
+  <section class="page" style="padding-bottom: 96px;">
+    <div class="section-head">
+      <h2 class="serif">Studio information</h2>
+    </div>
+    <dl class="facts" data-facts></dl>
+    <div style="margin-top: 40px;"><a class="btn gold" href="contact.html">Inquire about lessons →</a></div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+(async () => {
+  const t = await Site.loadJSON('content/teaching.json');
+  if (!t) return;
+  document.querySelectorAll('[data-bind]').forEach(el => {
+    const path = el.dataset.bind.split('.');
+    let v = { teaching: t };
+    for (const p of path) v = v?.[p];
+    if (v != null) el.innerHTML = v;
+  });
+  document.querySelector('[data-bio-body]').innerHTML = t.body_html || '';
+  document.querySelector('[data-courses]').innerHTML = (t.courses || []).map(c => `
+    <div style="padding: 28px 0; border-top: 1px solid var(--c-gold);">
+      <div class="eyebrow ink" style="margin-bottom: 12px;">Course</div>
+      <div class="serif" style="font-size: 26px; font-weight: 500; margin: 0 0 10px;">${c.title}</div>
+      <div style="font-size: 14px; color: var(--c-ink-soft); line-height: 1.6;">${c.desc}</div>
+    </div>
+  `).join('');
+  document.querySelector('[data-facts]').innerHTML = (t.studio_info || []).map(f => `<dt>${f.label}</dt><dd>${f.value}</dd>`).join('');
+})();
+</script>
+</body>
+</html>

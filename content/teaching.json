@@ -1,0 +1,19 @@
+{
+  "lede": "Voice studio at Texas A&M International University. Applied Voice, Song Literature, Voice Methods, Opera Workshop, and Choir.",
+  "body_html": "<p>Dr. Hwang leads the voice and choir programs at Texas A&amp;M International University, where she teaches Applied Voice, Song Literature, Voice Methods, Opera Workshop, and Choir. Her pedagogy combines rigorous bel canto technique with healthy vocal production and an emphasis on text, language, and stagecraft.</p><p>Students of all levels are welcome — from undergraduates building a foundation to graduate-level singers preparing for competitions and auditions. Masterclasses available by invitation.</p>",
+  "courses": [
+    { "title": "Applied Voice", "desc": "Private studio instruction in classical voice technique, repertoire, and performance practice." },
+    { "title": "Song Literature", "desc": "Survey of art song repertoire across German Lied, French mélodie, English, Italian, and Korean traditions." },
+    { "title": "Voice Methods", "desc": "Pedagogy course for music education students — vocal anatomy, healthy production, age-appropriate repertoire." },
+    { "title": "Opera Workshop", "desc": "Scene study, staging, and language coaching for student opera productions." },
+    { "title": "Choir", "desc": "University choir, building ensemble technique and a season of major works." }
+  ],
+  ],
+  "studio_info": [
+    { "label": "Institution", "value": "Texas A&M International University" },
+    { "label": "Department", "value": "Department of Fine & Performing Arts" },
+    { "label": "Office", "value": "TAMIU Center for the Fine & Performing Arts" },
+    { "label": "Inquiries", "value": "Prospective students may inquire about lessons via the Contact page." },
+    { "label": "Masterclasses", "value": "Available by invitation — recent masterclass at Chung-Ang University, Seoul." }
+  ]
+}

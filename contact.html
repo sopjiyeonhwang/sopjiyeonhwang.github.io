@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="contact">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Get in touch</div>
+    <h1 class="serif">Contact</h1>
+    <hr class="rule center" />
+    <p class="lede">Engagements, masterclasses, private studio inquiries, and press.</p>
+  </section>
+
+  <section class="page" style="padding: 24px 0 96px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px;">
+      <div>
+        <div class="eyebrow">Send a message</div>
+        <p class="serif italic" style="font-size: 24px; color: var(--c-ink-soft); margin: 16px 0 0; line-height: 1.5;">
+          Please use the form to reach Dr. Hwang directly. Response within 3–5 business days.
+        </p>
+
+        <div data-management-block hidden style="margin-top: 56px;">
+          <div class="eyebrow">Management</div>
+          <p style="margin-top: 14px; font-size: 15px; color: var(--c-ink-soft);" data-management></p>
+        </div>
+
+        <div style="margin-top: 56px;">
+          <div class="eyebrow">Studio &amp; Faculty</div>
+          <p style="margin-top: 14px; font-size: 15px; color: var(--c-ink-soft);">
+            Department of Fine &amp; Performing Arts<br />
+            Texas A&amp;M International University<br />
+            Laredo, TX
+          </p>
+        </div>
+
+        <div style="margin-top: 56px;">
+          <div class="eyebrow">Follow</div>
+          <ul data-social style="list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column; gap: 8px;"></ul>
+        </div>
+      </div>
+
+      <form id="contactForm" style="display: flex; flex-direction: column; gap: 18px;">
+        <div class="eyebrow">Message form</div>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink); font-weight: 500;">
+          Name
+          <input required type="text" name="name" style="border: none; border-bottom: 1px solid var(--c-ink); background: transparent; padding: 10px 0; font-family: var(--f-serif); font-size: 20px; color: var(--c-ink); outline: none;" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink); font-weight: 500;">
+          Email
+          <input required type="email" name="email" style="border: none; border-bottom: 1px solid var(--c-ink); background: transparent; padding: 10px 0; font-family: var(--f-serif); font-size: 20px; color: var(--c-ink); outline: none;" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink); font-weight: 500;">
+          Inquiry
+          <select name="inquiry" style="border: none; border-bottom: 1px solid var(--c-ink); background: transparent; padding: 10px 0; font-family: var(--f-serif); font-size: 20px; color: var(--c-ink); outline: none;">
+            <option>Engagement / booking</option>
+            <option>Masterclass</option>
+            <option>Private studio lessons</option>
+            <option>Press / media</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink); font-weight: 500;">
+          Message
+          <textarea required name="message" rows="6" style="border: 1px solid var(--c-line); background: transparent; padding: 14px; font-family: var(--f-serif); font-size: 18px; color: var(--c-ink); outline: none; resize: vertical;"></textarea>
+        </label>
+        <button class="btn gold" type="submit" style="align-self: flex-start; margin-top: 8px;">Send message</button>
+        <div id="formStatus" style="font-size: 13px; color: var(--c-mute); font-style: italic;"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+(async () => {
+  const s = await Site.loadJSON('content/site.json');
+  if (!s) return;
+
+  // Management block (only if enabled)
+  if (s.show_management && s.management) {
+    const block = document.querySelector('[data-management-block]');
+    block.hidden = false;
+    block.querySelector('[data-management]').textContent = s.management;
+  }
+
+  // Socials
+  const social = document.querySelector('[data-social]');
+  if (social && s.social) {
+    social.innerHTML = s.social.map(x => `<li><a href="${x.url}" target="_blank" rel="noopener" style="font-size: 15px; color: var(--c-ink-soft); border-bottom: 1px solid var(--c-gold);">${x.label} →</a></li>`).join('');
+  }
+
+  // Contact form -> Formspree (or compatible endpoint)
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!s.contact_form_endpoint) {
+      status.textContent = "Form is not yet configured. Add your Formspree endpoint in content/site.json → contact_form_endpoint.";
+      return;
+    }
+    status.textContent = "Sending…";
+    try {
+      const fd = new FormData(form);
+      const res = await fetch(s.contact_form_endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: fd
+      });
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Thank you — your message has been sent.";
+      } else {
+        status.textContent = "Sorry, something went wrong. Please try again later.";
+      }
+    } catch (err) {
+      status.textContent = "Sorry, something went wrong. Please try again later.";
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="media">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Recordings</div>
+    <h1 class="serif">Listen &amp; <span class="italic">watch</span></h1>
+    <hr class="rule center" />
+    <p class="lede">Selected video and audio from recent performances, recitals, and recording sessions.</p>
+  </section>
+
+  <section class="page" style="padding-bottom: 72px;">
+    <div class="section-head">
+      <h2 class="serif">Video</h2>
+      <a class="link" href="#" target="_blank" rel="noopener" data-youtube-link>YouTube Channel →</a>
+    </div>
+    <div data-videos class="card-grid"></div>
+  </section>
+
+  <section class="page" style="padding-bottom: 96px;">
+    <div class="section-head">
+      <h2 class="serif">Audio</h2>
+    </div>
+    <div data-audio></div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+(async () => {
+  const m = await Site.loadJSON('content/media.json');
+  if (!m) return;
+  document.querySelector('[data-videos]').innerHTML = (m.videos || []).map(v => `
+    <div class="card video-card">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/${v.youtube_id}" title="${v.title}" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>${v.title}</h3>
+      <div class="meta">${v.meta}</div>
+    </div>
+  `).join('');
+  document.querySelector('[data-audio]').innerHTML = (m.audio || []).map(a => `
+    <div style="display: grid; grid-template-columns: 48px 1fr auto auto; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--c-line-soft); align-items: center;">
+      <div style="font-family: var(--f-serif); font-style: italic; font-size: 28px; color: var(--c-gold);">♪</div>
+      <div>
+        <div class="serif" style="font-size: 22px; font-weight: 500;">${a.title}</div>
+        <div style="font-size: 12px; color: var(--c-mute); margin-top: 4px;">${a.meta}</div>
+      </div>
+      <div style="font-family: var(--f-mono); font-size: 12px; color: var(--c-mute);">${a.duration || ''}</div>
+      <button class="btn" style="padding: 10px 18px;">Play</button>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "videos": [
+    { "youtube_id": "dQw4w9WgXcQ", "title": "Adina — 'Prendi, per me sei libero'", "meta": "L'elisir d'amore · 2024" },
+    { "youtube_id": "dQw4w9WgXcQ", "title": "'Glitter and be gay'", "meta": "Candide · Bernstein · 2023" },
+    { "youtube_id": "dQw4w9WgXcQ", "title": "'O luce di quest'anima'", "meta": "Linda di Chamounix · Donizetti" },
+    { "youtube_id": "dQw4w9WgXcQ", "title": "Korean Art Song Recital", "meta": "TAMIU Faculty Recital · 2024" }
+  ],
+  "audio": [
+    { "title": "Caro nome", "meta": "Rigoletto · Verdi", "duration": "4:32" },
+    { "title": "Glitter and be gay", "meta": "Candide · Bernstein", "duration": "5:18" },
+    { "title": "Una donna a quindici anni", "meta": "Così fan tutte · Mozart", "duration": "3:47" }
+  ]
+}

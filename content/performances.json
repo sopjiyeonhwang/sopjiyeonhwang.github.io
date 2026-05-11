@@ -1,0 +1,93 @@
+{
+  "upcoming": [
+    {
+      "date": "2026-03-14",
+      "title": "L'elisir d'amore",
+      "role": "Adina",
+      "venue": "Laredo Center for the Arts",
+      "city": "Laredo, TX",
+      "ticket_url": ""
+    },
+    {
+      "date": "2026-04-22",
+      "title": "Recital — Songs of Spring",
+      "role": "with pianist James Park",
+      "venue": "TAMIU Center for the Fine & Performing Arts",
+      "city": "Laredo, TX",
+      "ticket_url": ""
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Die Fledermaus",
+      "role": "Adele",
+      "venue": "Camerata New Jersey",
+      "city": "Princeton, NJ",
+      "ticket_url": ""
+    },
+    {
+      "date": "2026-09-19",
+      "title": "Carnegie Recital",
+      "role": "Lyric Coloratura Recital",
+      "venue": "Weill Recital Hall, Carnegie Hall",
+      "city": "New York, NY",
+      "ticket_url": ""
+    }
+  ],
+  "past": [
+    {
+      "date": "2024-11-02",
+      "title": "Le nozze di Figaro",
+      "role": "Susanna",
+      "venue": "TAMIU Opera Workshop",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2024-03-15",
+      "title": "Faculty Recital",
+      "role": "Solo Recital",
+      "venue": "TAMIU CFPA",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2022-11-12",
+      "title": "Carnegie Debut Recital",
+      "role": "Solo Recital",
+      "venue": "Weill Recital Hall, Carnegie Hall",
+      "city": "New York, NY"
+    },
+    {
+      "date": "2022-01-15",
+      "title": "NATSAA Artist Auditions",
+      "role": "William Vernad Award Winner",
+      "venue": "National Round",
+      "city": "New York, NY"
+    },
+    {
+      "date": "2021-05-20",
+      "title": "L'elisir d'amore — Webpera",
+      "role": "Adina (World Premiere)",
+      "venue": "Camerata New Jersey",
+      "city": "Virtual"
+    },
+    {
+      "date": "2020-02-08",
+      "title": "Il Barbiere di Siviglia",
+      "role": "Berta",
+      "venue": "Cleveland Opera Theatre",
+      "city": "Cleveland, OH"
+    }
+  ],
+  "repertoire": [
+    { "role": "Adina", "opera": "L'elisir d'amore", "composer": "Donizetti" },
+    { "role": "Adele", "opera": "Die Fledermaus", "composer": "J. Strauss II" },
+    { "role": "Zerlina", "opera": "Don Giovanni", "composer": "Mozart" },
+    { "role": "Susanna", "opera": "Le nozze di Figaro", "composer": "Mozart" },
+    { "role": "Papagena", "opera": "Die Zauberflöte", "composer": "Mozart" },
+    { "role": "Lisette", "opera": "La Rondine", "composer": "Puccini" },
+    { "role": "Berta", "opera": "Il Barbiere di Siviglia", "composer": "Rossini" },
+    { "role": "Anna Gomez", "opera": "The Consul", "composer": "Menotti" },
+    { "role": "Miss Titmouse", "opera": "Too Many Sopranos", "composer": "Penhorwood" },
+    { "role": "Carolina", "opera": "Il Matrimonio Segreto", "composer": "Cimarosa" },
+    { "role": "Lakmé", "opera": "Lakmé", "composer": "Delibes" }
+  ]
+}
