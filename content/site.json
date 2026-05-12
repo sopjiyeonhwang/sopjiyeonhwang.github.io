@@ -5,7 +5,17 @@
   "show_management": false,
   "management": "Management inquiries welcome",
   "social": [
-    { "label": "Instagram", "url": "https://instagram.com/" },
-    { "label": "YouTube", "url": "https://youtube.com/" }
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://youtube.com/"
+    },
+    {
+      "label": "test",
+      "url": "test"
+    }
   ]
 }
