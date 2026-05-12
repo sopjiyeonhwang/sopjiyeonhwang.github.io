@@ -21,6 +21,11 @@
     <p class="lede">Awards, competitions, and graduate school admissions from current and former students of Dr. Hwang's studio.</p>
   </section>
 
+  <section class="page" id="testimonials-section" hidden style="padding-bottom: 64px;">
+    <h2 class="serif" style="font-size: 28px; margin-bottom: 32px;">Student <span class="italic">Testimonials</span></h2>
+    <div data-testimonials class="card-grid"></div>
+  </section>
+
   <section class="page" style="padding-bottom: 96px;">
     <div data-achievements></div>
   </section>
@@ -33,6 +38,19 @@
 (async () => {
   const t = await Site.loadJSON('content/students.json');
   if (!t) return;
+  const testimonials = t.testimonials || [];
+  if (testimonials.length) {
+    document.getElementById('testimonials-section').hidden = false;
+    document.querySelector('[data-testimonials]').innerHTML = testimonials.map(v => `
+      <div class="card video-card">
+        <div class="frame">
+          <iframe src="https://www.youtube.com/embed/${v.youtube_id}" title="${v.student_name || 'Student testimonial'}" allowfullscreen loading="lazy"></iframe>
+        </div>
+        ${v.student_name ? `<h3>${v.student_name}</h3>` : ''}
+        ${v.description ? `<div class="meta">${v.description}</div>` : ''}
+      </div>
+    `).join('');
+  }
   const ach = (t.student_achievements || []).slice().sort((a,b) => String(b.year).localeCompare(String(a.year)));
   const byYear = {};
   ach.forEach(a => { (byYear[a.year] = byYear[a.year] || []).push(a); });

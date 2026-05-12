@@ -152,6 +152,16 @@ collections:
         file: "content/students.json"
         format: "json"
         fields:
+          - name: testimonials
+            label: "Student Testimonials (YouTube)"
+            label_singular: "Testimonial"
+            widget: list
+            required: false
+            summary: "{{fields.student_name}}"
+            fields:
+              - { name: youtube_id, label: "YouTube video ID", widget: string, hint: "e.g. dQw4w9WgXcQ — the part after v= in the URL" }
+              - { name: student_name, label: "Student name", widget: string, required: false }
+              - { name: description, label: "Short description", widget: string, required: false, hint: "e.g. 'Graduate school admission journey'" }
           - name: student_achievements
             label: "Achievements"
             label_singular: "Achievement"

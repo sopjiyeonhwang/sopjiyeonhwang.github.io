@@ -1,4 +1,21 @@
 {
+  "testimonials": [
+    {
+      "youtube_id": "dQw4w9WgXcQ",
+      "student_name": "Student Name 1",
+      "description": "Short description of their journey or success"
+    },
+    {
+      "youtube_id": "dQw4w9WgXcQ",
+      "student_name": "Student Name 2",
+      "description": "Short description of their journey or success"
+    },
+    {
+      "youtube_id": "dQw4w9WgXcQ",
+      "student_name": "Student Name 3",
+      "description": "Short description of their journey or success"
+    }
+  ],
   "student_achievements": [
     {
       "year": "2024",
