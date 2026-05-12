@@ -56,14 +56,14 @@
   if (m.show_audio && m.audio?.length) {
     document.querySelector('[data-audio-section]').hidden = false;
     document.querySelector('[data-audio]').innerHTML = (m.audio || []).map(a => `
-      <div style="display: grid; grid-template-columns: 48px 1fr auto auto; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--c-line-soft); align-items: center;">
+      <div class="audio-row">
         <div style="font-family: var(--f-serif); font-style: italic; font-size: 28px; color: var(--c-gold);">♪</div>
         <div>
           <div class="serif" style="font-size: 22px; font-weight: 500;">${a.title}</div>
           <div style="font-size: 12px; color: var(--c-mute); margin-top: 4px;">${a.meta}</div>
         </div>
-        <div style="font-family: var(--f-mono); font-size: 12px; color: var(--c-mute);">${a.duration || ''}</div>
-        <button class="btn" style="padding: 10px 18px;">Play</button>
+        <div class="audio-duration" style="font-family: var(--f-mono); font-size: 12px; color: var(--c-mute);">${a.duration || ''}</div>
+        <button class="btn audio-btn" style="padding: 10px 18px;">Play</button>
       </div>
     `).join('');
   }

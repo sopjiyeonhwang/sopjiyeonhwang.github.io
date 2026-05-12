@@ -147,7 +147,8 @@ a:hover { color: var(--c-gold); }
   padding: 0 var(--page-pad-x);
 }
 .page-header {
-  padding: 88px 0 56px;
+  padding-top: 88px;
+  padding-bottom: 56px;
   text-align: center;
 }
 .page-header h1 {
@@ -351,6 +352,24 @@ section.band h2 {
 @media (max-width: 880px) {
   .perf-row { grid-template-columns: 100px 1fr; gap: 20px; }
   .perf-row .venue-col, .perf-row .ticket { grid-column: 2; }
+}
+
+/* ============ Audio track rows ============ */
+.audio-row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto auto;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--c-line-soft);
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .audio-row {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+  .audio-row .audio-duration { display: none; }
+  .audio-row .audio-btn { grid-column: 2; justify-self: start; margin-top: 4px; }
 }
 
 /* ============ Student achievement rows ============ */
