@@ -38,11 +38,11 @@
   ach.forEach(a => { (byYear[a.year] = byYear[a.year] || []).push(a); });
   const years = Object.keys(byYear).sort((a,b) => b.localeCompare(a));
   document.querySelector('[data-achievements]').innerHTML = years.map(y => `
-    <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--c-line-soft); align-items: start;">
+    <div class="year-row">
       <div class="serif italic" style="font-size: 36px; color: var(--c-gold); line-height: 1;">${y}</div>
       <div>
         ${byYear[y].map(a => `
-          <div style="display: grid; grid-template-columns: 1.2fr 1fr 1.4fr; gap: 24px; padding: 14px 0; border-bottom: 1px dashed var(--c-line-soft); align-items: baseline;">
+          <div class="student-row">
             <div class="serif" style="font-size: 20px; font-weight: 500;">${a.student}</div>
             <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink); font-weight: 500;">${a.achievement}</div>
             <div style="font-size: 13px; color: var(--c-mute);">${a.context}</div>

@@ -255,6 +255,15 @@ footer.site-foot .copy {
   footer.site-foot .copy { flex-direction: column; gap: 12px; }
 }
 
+/* ============ Mobile-responsive helpers ============ */
+/* Two-column grids collapse to single column on mobile */
+@media (max-width: 720px) {
+  .stack-mobile {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
 /* ============ Section primitives ============ */
 section.band {
   padding: 88px 0;
@@ -342,6 +351,28 @@ section.band h2 {
 @media (max-width: 880px) {
   .perf-row { grid-template-columns: 100px 1fr; gap: 20px; }
   .perf-row .venue-col, .perf-row .ticket { grid-column: 2; }
+}
+
+/* ============ Student achievement rows ============ */
+.year-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--c-line-soft);
+  align-items: start;
+}
+.student-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.4fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--c-line-soft);
+  align-items: baseline;
+}
+@media (max-width: 720px) {
+  .year-row { grid-template-columns: 1fr; gap: 12px; }
+  .student-row { grid-template-columns: 1fr; gap: 2px; padding: 16px 0; }
 }
 
 /* ============ Prose ============ */
@@ -438,8 +469,8 @@ section.band h2 {
 /* Gallery tiles */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 8px;
 }
 .gallery-grid .tile {
   position: relative;
@@ -455,7 +486,7 @@ section.band h2 {
 @media (max-width: 880px) {
   .gallery-grid .tile.w4,
   .gallery-grid .tile.w6,
-  .gallery-grid .tile.w8 { grid-column: span 12; }
+  .gallery-grid .tile.w8 { grid-column: span 16; }
 }
 
 /* ============ News items ============ */

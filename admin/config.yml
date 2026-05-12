@@ -157,6 +157,7 @@ collections:
         file: "content/media.json"
         format: "json"
         fields:
+          - { name: show_audio, label: "Show audio section?", widget: boolean, default: false, hint: "Enable to display the audio tracks list on the Media page." }
           - name: videos
             label: "YouTube videos"
             widget: list

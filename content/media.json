@@ -1,4 +1,5 @@
 {
+  "show_audio": false,
   "videos": [
     { "youtube_id": "dQw4w9WgXcQ", "title": "Adina — 'Prendi, per me sei libero'", "meta": "L'elisir d'amore · 2024" },
     { "youtube_id": "dQw4w9WgXcQ", "title": "'Glitter and be gay'", "meta": "Candide · Bernstein · 2023" },
