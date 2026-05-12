@@ -236,7 +236,7 @@ collections:
             fields:
               - { name: date, label: Date, widget: datetime, time_format: false }
               - { name: title, label: Title, widget: string }
-              - { name: role, label: "Role / program", widget: string, required: false }
+              - { name: role, label: "Role / program (Optional)", widget: string, required: false, default: "" }
               - { name: venue, label: Venue, widget: string }
               - { name: city, label: City, widget: string }
               - { name: ticket_url, label: "Ticket URL", widget: string, required: false }
@@ -246,7 +246,7 @@ collections:
             fields:
               - { name: date, label: Date, widget: datetime, time_format: false }
               - { name: title, label: Title, widget: string }
-              - { name: role, label: "Role / program", widget: string, required: false }
+              - { name: role, label: "Role / program (Optional)", widget: string, required: false, default: "" }
               - { name: venue, label: Venue, widget: string }
               - { name: city, label: City, widget: string }
           - name: repertoire
