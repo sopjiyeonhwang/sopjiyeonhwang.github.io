@@ -129,6 +129,17 @@ collections:
             fields:
               - { name: title, label: Course title, widget: string }
               - { name: desc, label: Description, widget: text }
+          - name: masterclasses
+            label: "Masterclasses"
+            label_singular: "Masterclass"
+            widget: list
+            required: false
+            summary: "{{fields.date}} — {{fields.institution}}"
+            fields:
+              - { name: date, label: Date, widget: datetime, time_format: false }
+              - { name: institution, label: Institution, widget: string }
+              - { name: location, label: "Location (city, country)", widget: string, required: false }
+              - { name: topic, label: "Topic / description", widget: text, required: false }
           - name: studio_info
             label: "Studio info"
             widget: list

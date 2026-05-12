@@ -354,6 +354,55 @@ section.band h2 {
   .perf-row .venue-col, .perf-row .ticket { grid-column: 2; }
 }
 
+/* ============ Masterclass rows ============ */
+.masterclass-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--c-line-soft);
+  align-items: start;
+}
+.masterclass-row .mc-date {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--c-ink-soft);
+  white-space: nowrap;
+}
+.masterclass-row .mc-year {
+  display: block;
+  font-family: var(--f-sans);
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--c-gold);
+  margin-top: 4px;
+}
+.masterclass-row .mc-institution {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  font-weight: 500;
+}
+.masterclass-row .mc-location {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-top: 5px;
+}
+.masterclass-row .mc-topic {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--c-ink-soft);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+@media (max-width: 720px) {
+  .masterclass-row { grid-template-columns: 1fr; gap: 6px; }
+}
+
 /* ============ Audio track rows ============ */
 .audio-row {
   display: grid;

@@ -8,6 +8,14 @@
     { "title": "Opera Workshop", "desc": "Scene study, staging, and language coaching for student opera productions." },
     { "title": "Choir", "desc": "University choir, building ensemble technique and a season of major works." }
   ],
+  "masterclasses": [
+    {
+      "date": "2024-08-04",
+      "institution": "Chung-Ang University",
+      "location": "Seoul, South Korea",
+      "topic": "Bel canto technique and coloratura repertoire for advanced voice students"
+    }
+  ],
   "studio_info": [
     { "label": "Institution", "value": "Texas A&M International University" },
     { "label": "Department", "value": "Department of Fine & Performing Arts" },

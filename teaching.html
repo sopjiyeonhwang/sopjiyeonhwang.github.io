@@ -37,6 +37,13 @@
     <div data-courses style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px;"></div>
   </section>
 
+  <section class="page" style="padding-bottom: 88px;" data-masterclass-section hidden>
+    <div class="section-head">
+      <h2 class="serif">Masterclasses</h2>
+    </div>
+    <div data-masterclasses></div>
+  </section>
+
   <section class="page" style="padding-bottom: 96px;">
     <div class="section-head">
       <h2 class="serif">Studio information</h2>
@@ -67,6 +74,20 @@
       <div style="font-size: 14px; color: var(--c-ink-soft); line-height: 1.6;">${c.desc}</div>
     </div>
   `).join('');
+  const masterclasses = t.masterclasses || [];
+  if (masterclasses.length) {
+    document.querySelector('[data-masterclass-section]').hidden = false;
+    document.querySelector('[data-masterclasses]').innerHTML = masterclasses.map(m => `
+      <div class="masterclass-row">
+        <div class="mc-date">${Site.fmtDate(m.date)}<span class="mc-year">${Site.fmtYear(m.date)}</span></div>
+        <div>
+          <div class="mc-institution">${m.institution}</div>
+          ${m.location ? `<div class="mc-location">${m.location}</div>` : ''}
+          ${m.topic ? `<div class="mc-topic">${m.topic}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
   document.querySelector('[data-facts]').innerHTML = (t.studio_info || []).map(f => `<dt>${f.label}</dt><dd>${f.value}</dd>`).join('');
 })();
 </script>
