@@ -66,7 +66,7 @@
         </div>
         <div class="copy">
           <span>© ${year} ${site?.name || 'Jiyeon Hwang'}. All rights reserved.</span>
-          <span>Site by hand · Hosted on GitHub Pages</span>
+          <span>Site by JH</span>
         </div>
       </footer>
     `;
