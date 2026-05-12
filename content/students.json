@@ -1,10 +1,28 @@
 {
   "student_achievements": [
-    { "year": "2025", "student": "Maria González", "achievement": "First Prize", "context": "NATS Region Texoma Auditions — Lower College Women" },
-    { "year": "2025", "student": "Daniel Ortiz", "achievement": "Admitted (M.M. Voice Performance)", "context": "Manhattan School of Music" },
-    { "year": "2024", "student": "Sophia Reyes", "achievement": "Encouragement Award", "context": "NATS National Student Auditions" },
-    { "year": "2024", "student": "Andrés Martínez", "achievement": "Admitted (B.M. Voice)", "context": "University of Minnesota School of Music" },
-    { "year": "2024", "student": "Laura Chen", "achievement": "Semi-finalist", "context": "Forte International Vocal Competition" },
-    { "year": "2023", "student": "TAMIU Opera Workshop", "achievement": "Featured performance", "context": "Texas Music Educators Association Convention" }
+    {
+      "year": "2024",
+      "student": "Jihye Lee",
+      "achievement": "Musical Actress",
+      "context": "Film: Parasite (dir. Bong Joon-ho, Oscar-winning 2020) · Apple TV+ Pachinko (opera singer role, 2022) · Musical theatre coaching: Werther, Monte Christo, Phantom, Anna Karenina, Rebecca"
+    },
+    {
+      "year": "2021",
+      "student": "Joy Kim",
+      "achievement": "M.M. Voice Performance",
+      "context": "Indiana University Bloomington — Jacobs School of Music · Also accepted with scholarship: Manhattan School of Music, New England Conservatory"
+    },
+    {
+      "year": "2020",
+      "student": "Hosuk Lee",
+      "achievement": "TV Drama Actor",
+      "context": "Coaching for musical performance and TV drama acting"
+    },
+    {
+      "year": "2018",
+      "student": "Jimin Kim",
+      "achievement": "TV Drama Actress",
+      "context": "Admitted to Chung-Ang University Acting School (B.A.) — top-level drama and acting school in Korea"
+    }
   ]
 }
