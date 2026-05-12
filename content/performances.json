@@ -1,93 +1,233 @@
 {
   "upcoming": [
     {
-      "date": "2026-03-14",
-      "title": "L'elisir d'amore",
-      "role": "Adina",
-      "venue": "Laredo Center for the Arts",
-      "city": "Laredo, TX",
+      "date": "2026-09-01",
+      "title": "TBA",
+      "role": "",
+      "venue": "TBA",
+      "city": "",
       "ticket_url": ""
     },
     {
-      "date": "2026-04-22",
-      "title": "Recital — Songs of Spring",
-      "role": "with pianist James Park",
-      "venue": "TAMIU Center for the Fine & Performing Arts",
-      "city": "Laredo, TX",
-      "ticket_url": ""
-    },
-    {
-      "date": "2026-06-08",
-      "title": "Die Fledermaus",
-      "role": "Adele",
-      "venue": "Camerata New Jersey",
-      "city": "Princeton, NJ",
-      "ticket_url": ""
-    },
-    {
-      "date": "2026-09-19",
-      "title": "Carnegie Recital",
-      "role": "Lyric Coloratura Recital",
-      "venue": "Weill Recital Hall, Carnegie Hall",
-      "city": "New York, NY",
+      "date": "2026-11-01",
+      "title": "TBA",
+      "role": "",
+      "venue": "TBA",
+      "city": "",
       "ticket_url": ""
     }
   ],
   "past": [
     {
-      "date": "2024-11-02",
-      "title": "Le nozze di Figaro",
-      "role": "Susanna",
-      "venue": "TAMIU Opera Workshop",
+      "date": "2026-03-01",
+      "title": "Solo Recital",
+      "role": "Guest Pianist, Kyungeun Nah",
+      "venue": "Texas A&M International University",
       "city": "Laredo, TX"
     },
     {
-      "date": "2024-03-15",
+      "date": "2026-03-01",
+      "title": "Dubois: Seven Last Words of Christ",
+      "role": "Guest Soprano Soloist",
+      "venue": "Laredo Philharmonic Orchestra",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2026-02-01",
+      "title": "Our Story with Art Concert",
+      "role": "Guest Performer",
+      "venue": "University of Oklahoma",
+      "city": "Norman, OK"
+    },
+    {
+      "date": "2025-12-01",
+      "title": "Christmas Cantata",
+      "role": "Guest Soprano Soloist",
+      "venue": "Korean Central Presbyterian Church of Houston",
+      "city": "Houston, TX"
+    },
+    {
+      "date": "2025-11-01",
+      "title": "Korean 80th Liberation Concert",
+      "role": "Guest Voice Performer",
+      "venue": "University of Minnesota",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2025-09-01",
+      "title": "The Korean Art Song Concert",
+      "role": "Host Performer",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2025-07-01",
+      "title": "The Sharp Ensemble Concert",
+      "role": "",
+      "venue": "Sungsan Art Hall",
+      "city": "Changwon, South Korea"
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Korean Art Song Concert",
+      "role": "",
+      "venue": "Culture Art Center",
+      "city": "Changwon, South Korea"
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Faculty Duo Recital",
+      "role": "with Tenor Seokho Park & Pianist Taniana Gorbunova",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2024-12-01",
+      "title": "TAMIU Choir & United High School Choir",
+      "role": "Choir Director/Conductor — Hallelujah from Messiah · Ave verum corpus by Mozart",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2024-09-01",
       "title": "Faculty Recital",
-      "role": "Solo Recital",
-      "venue": "TAMIU CFPA",
+      "role": "with Trumpeter Michael Mann & Organist Colin Campbell",
+      "venue": "Texas A&M International University",
       "city": "Laredo, TX"
     },
     {
-      "date": "2022-11-12",
-      "title": "Carnegie Debut Recital",
+      "date": "2024-04-01",
+      "title": "Choir & Voice Fall Recital",
+      "role": "Choir Director/Conductor",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2024-04-01",
+      "title": "RHIZOME: Art Installation Opening Project Performance",
+      "role": "",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2023-09-01",
+      "title": "Faculty Recital",
+      "role": "with Pianist Dr. Friedrich Gechter",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, TX"
+    },
+    {
+      "date": "2023-07-01",
+      "title": "National Anthem Solo",
+      "role": "with St. Olaf Church Choir",
+      "venue": "Target Field (MLB)",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2023-05-01",
+      "title": "St. Olaf Solist Recital",
+      "role": "",
+      "venue": "St. Olaf Catholic Church",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2023-01-01",
+      "title": "Don Pasquale — Webpera",
+      "role": "Norina",
+      "venue": "Camerata New Jersey",
+      "city": "New Jersey, NJ"
+    },
+    {
+      "date": "2022-01-01",
+      "title": "Winner's Concert — Forte International Competition",
       "role": "Solo Recital",
       "venue": "Weill Recital Hall, Carnegie Hall",
       "city": "New York, NY"
     },
     {
-      "date": "2022-01-15",
-      "title": "NATSAA Artist Auditions",
-      "role": "William Vernad Award Winner",
-      "venue": "National Round",
-      "city": "New York, NY"
+      "date": "2021-01-01",
+      "title": "Les Dialogues des Carmélites",
+      "role": "Sister Constance",
+      "venue": "University of Minnesota",
+      "city": "Minneapolis, MN"
     },
     {
-      "date": "2021-05-20",
+      "date": "2020-01-01",
       "title": "L'elisir d'amore — Webpera",
       "role": "Adina (World Premiere)",
       "venue": "Camerata New Jersey",
+      "city": "New Jersey, NJ"
+    },
+    {
+      "date": "2020-01-01",
+      "title": "Il Barbiere di Siviglia",
+      "role": "Berta",
+      "venue": "Cleveland Opera",
       "city": "Virtual"
     },
     {
-      "date": "2020-02-08",
-      "title": "Il Barbiere di Siviglia",
-      "role": "Berta",
-      "venue": "Cleveland Opera Theatre",
-      "city": "Cleveland, OH"
+      "date": "2019-01-01",
+      "title": "Kenwood Symphony Orchestra Winner Concert",
+      "role": "Solo",
+      "venue": "Kenwood Symphony Orchestra",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2019-01-01",
+      "title": "Outreach Opera — The Consul",
+      "role": "Anna Gomez",
+      "venue": "Arbeit Opera",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2019-01-01",
+      "title": "Outreach Opera — The Consul",
+      "role": "Anna Gomez",
+      "venue": "Arbeit Opera",
+      "city": "Wisconsin, WI"
+    },
+    {
+      "date": "2019-01-01",
+      "title": "Solo Recital feat. Clarinetist SangYoon Kim",
+      "role": "",
+      "venue": "University of Minnesota",
+      "city": "Minneapolis, MN"
+    },
+    {
+      "date": "2016-01-01",
+      "title": "Young Artist Gala Concert",
+      "role": "",
+      "venue": "Arbeit Opera",
+      "city": "Seoul, South Korea"
+    },
+    {
+      "date": "2015-01-01",
+      "title": "Romantic Ensemble Concert",
+      "role": "",
+      "venue": "Manhattan School of Music",
+      "city": "New York, NY"
+    },
+    {
+      "date": "2014-01-01",
+      "title": "Young Artist Gala Concert",
+      "role": "",
+      "venue": "Arbeit Opera",
+      "city": "New York, NY"
     }
   ],
   "repertoire": [
     { "role": "Adina", "opera": "L'elisir d'amore", "composer": "Donizetti" },
-    { "role": "Adele", "opera": "Die Fledermaus", "composer": "J. Strauss II" },
+    { "role": "Norina", "opera": "Don Pasquale", "composer": "Donizetti" },
+    { "role": "Lakmé", "opera": "Lakmé", "composer": "Delibes" },
     { "role": "Zerlina", "opera": "Don Giovanni", "composer": "Mozart" },
     { "role": "Susanna", "opera": "Le nozze di Figaro", "composer": "Mozart" },
+    { "role": "Pamina", "opera": "Die Zauberflöte", "composer": "Mozart" },
     { "role": "Papagena", "opera": "Die Zauberflöte", "composer": "Mozart" },
+    { "role": "Sister Constance", "opera": "Les Dialogues des Carmélites", "composer": "Poulenc" },
     { "role": "Lisette", "opera": "La Rondine", "composer": "Puccini" },
     { "role": "Berta", "opera": "Il Barbiere di Siviglia", "composer": "Rossini" },
     { "role": "Anna Gomez", "opera": "The Consul", "composer": "Menotti" },
     { "role": "Miss Titmouse", "opera": "Too Many Sopranos", "composer": "Penhorwood" },
-    { "role": "Carolina", "opera": "Il Matrimonio Segreto", "composer": "Cimarosa" },
-    { "role": "Lakmé", "opera": "Lakmé", "composer": "Delibes" }
+    { "role": "Carollina", "opera": "Il Matrimonio Segreto", "composer": "Cimarosa" }
   ]
 }
