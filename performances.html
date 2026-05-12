@@ -70,8 +70,9 @@ function row(p, past) {
 (async () => {
   const p = await Site.loadJSON('content/performances.json');
   if (!p) return;
-  document.querySelector('[data-upcoming]').innerHTML = (p.upcoming || []).map(x => row(x, false)).join('');
-  document.querySelector('[data-past]').innerHTML = (p.past || []).map(x => row(x, true)).join('');
+  const byDate = (a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0;
+  document.querySelector('[data-upcoming]').innerHTML = (p.upcoming || []).sort(byDate).map(x => row(x, false)).join('');
+  document.querySelector('[data-past]').innerHTML = (p.past || []).sort((a, b) => byDate(b, a)).map(x => row(x, true)).join('');
   document.querySelector('[data-rep]').innerHTML = (p.repertoire || []).map(r => `
     <div style="padding: 14px 0; border-bottom: 1px solid var(--c-line-soft); display: flex; justify-content: space-between; align-items: baseline;">
       <div class="serif italic" style="font-size: 22px;">${r.role}</div>
