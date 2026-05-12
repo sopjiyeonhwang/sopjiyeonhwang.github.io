@@ -19,6 +19,7 @@
   <section class="page" style="padding: clamp(56px, 8vw, 96px) 0 0; text-align: center;">
     <div class="eyebrow" data-bind="home.eyebrow">Lyric Coloratura Soprano · Voice Faculty</div>
     <h1 class="serif" style="font-size: clamp(72px, 12vw, 156px); line-height: 0.95; font-weight: 400; margin: 22px 0 0; letter-spacing: -0.02em;">
+      <span data-bind="home.name_title">Dr.</span>
       <span data-bind="home.name_first">Jiyeon</span>
       <span class="italic" data-bind="home.name_last">Hwang</span>
     </h1>
@@ -44,6 +45,15 @@
       </div>
     </section>
   </div>
+
+  <!-- RECENT NEWS -->
+  <section class="page" style="padding-top: 88px;" data-news-section hidden>
+    <div class="section-head">
+      <h2 class="serif">Recent news</h2>
+      <a class="link" href="news.html">View all news →</a>
+    </div>
+    <div data-news-list></div>
+  </section>
 
   <!-- UPCOMING PERFORMANCES -->
   <section class="page" style="padding-top: 88px;">
@@ -95,6 +105,19 @@
       for (const p of path) v = v?.[p];
       if (v != null) el.innerHTML = v;
     });
+  }
+
+  // recent news (first 3)
+  const newsSection = document.querySelector('[data-news-section]');
+  const newsList = document.querySelector('[data-news-list]');
+  if (newsSection && newsList && home?.recent_news?.length) {
+    newsSection.hidden = false;
+    newsList.innerHTML = home.recent_news.slice(0, 3).map(n => `
+      <div class="news-item">
+        <div class="news-date">${Site.fmtDate(n.date)}<span class="news-year">${Site.fmtYear(n.date)}</span></div>
+        <div class="news-headline">${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">${n.headline}</a>` : n.headline}</div>
+      </div>
+    `).join('');
   }
 
   // upcoming performances (first 3)

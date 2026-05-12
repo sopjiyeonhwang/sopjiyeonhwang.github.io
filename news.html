@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>News — Dr. Jiyeon Hwang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page page-header">
+    <div class="eyebrow">Updates</div>
+    <h1 class="serif">News</h1>
+    <hr class="rule center" />
+    <p class="lede">Announcements, appointments, press features, and recent highlights.</p>
+  </section>
+
+  <section class="page" style="padding-bottom: 96px;">
+    <div data-news-all></div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/site.js"></script>
+<script>
+(async () => {
+  const home = await Site.loadJSON('content/home.json');
+  const host = document.querySelector('[data-news-all]');
+  if (!host || !home?.recent_news?.length) return;
+  host.innerHTML = home.recent_news.map(n => `
+    <div class="news-item">
+      <div class="news-date">${Site.fmtDate(n.date)}<span class="news-year">${Site.fmtYear(n.date)}</span></div>
+      <div class="news-headline">${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">${n.headline}</a>` : n.headline}</div>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>

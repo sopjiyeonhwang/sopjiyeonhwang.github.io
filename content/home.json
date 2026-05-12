@@ -1,10 +1,33 @@
 {
   "eyebrow": "Lyric Coloratura Soprano · Voice Faculty",
+  "name_title": "Dr.",
   "name_first": "Jiyeon",
   "name_last": "Hwang",
   "tagline": "\"A distinctive vocal range and a bright, sweet timbre\" — carried from Carnegie's Weill Recital Hall to opera houses across four countries.",
   "show_press_quote": false,
   "press_quote": "Hwang's coloratura sparkles with effortless agility — her Adina was the radiant center of the evening.",
   "press_quote_attr": "Opera Review, 2024",
-  "intro_short": "Dr. Jiyeon Hwang is a Korean lyric coloratura soprano known for her distinctive vocal range and bright, sweet timbre, performing extensively in operatic roles, recitals, and concerts across the United States, Italy, the Czech Republic, and South Korea."
+  "intro_short": "Dr. Jiyeon Hwang is a Korean lyric coloratura soprano known for her distinctive vocal range and bright, sweet timbre, performing extensively in operatic roles, recitals, and concerts across the United States, Italy, the Czech Republic, and South Korea.",
+  "recent_news": [
+    {
+      "date": "2025-04-01",
+      "headline": "Invited recital at Carnegie's Weill Recital Hall — New York, NY",
+      "url": ""
+    },
+    {
+      "date": "2025-02-20",
+      "headline": "Appointed Assistant Professor of Voice & Choir at Texas A&M International University",
+      "url": ""
+    },
+    {
+      "date": "2025-01-10",
+      "headline": "Featured soloist with the Laredo Philharmonic Orchestra",
+      "url": ""
+    },
+    {
+      "date": "2024-11-05",
+      "headline": "World premiere performance at the Czech Republic International Music Festival",
+      "url": ""
+    }
+  ]
 }

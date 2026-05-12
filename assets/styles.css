@@ -458,6 +458,42 @@ section.band h2 {
   .gallery-grid .tile.w8 { grid-column: span 12; }
 }
 
+/* ============ News items ============ */
+.news-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--c-line-soft);
+  align-items: baseline;
+}
+.news-date {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--c-ink-soft);
+  white-space: nowrap;
+}
+.news-year {
+  display: block;
+  font-family: var(--f-sans);
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--c-gold);
+  margin-top: 4px;
+}
+.news-headline {
+  font-family: var(--f-serif);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--c-ink);
+}
+.news-headline a { border-bottom: 1px solid var(--c-gold); }
+@media (max-width: 880px) {
+  .news-item { grid-template-columns: 1fr; gap: 6px; }
+}
+
 /* ============ Definition list / facts ============ */
 .facts {
   display: grid;
