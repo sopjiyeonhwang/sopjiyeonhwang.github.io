@@ -5,7 +5,7 @@
       "title": "TBA",
       "role": "",
       "venue": "TBA",
-      "city": "",
+      "city": "TBD",
       "ticket_url": ""
     },
     {
@@ -13,8 +13,15 @@
       "title": "TBA",
       "role": "",
       "venue": "TBA",
-      "city": "",
+      "city": "TBD",
       "ticket_url": ""
+    },
+    {
+      "role": "TBD",
+      "date": "2026-05-11T00:00:00.000-04:00",
+      "title": "TBD",
+      "venue": "TBD",
+      "city": "TBD"
     }
   ],
   "past": [
@@ -216,18 +223,70 @@
     }
   ],
   "repertoire": [
-    { "role": "Adina", "opera": "L'elisir d'amore", "composer": "Donizetti" },
-    { "role": "Norina", "opera": "Don Pasquale", "composer": "Donizetti" },
-    { "role": "Lakmé", "opera": "Lakmé", "composer": "Delibes" },
-    { "role": "Zerlina", "opera": "Don Giovanni", "composer": "Mozart" },
-    { "role": "Susanna", "opera": "Le nozze di Figaro", "composer": "Mozart" },
-    { "role": "Pamina", "opera": "Die Zauberflöte", "composer": "Mozart" },
-    { "role": "Papagena", "opera": "Die Zauberflöte", "composer": "Mozart" },
-    { "role": "Sister Constance", "opera": "Les Dialogues des Carmélites", "composer": "Poulenc" },
-    { "role": "Lisette", "opera": "La Rondine", "composer": "Puccini" },
-    { "role": "Berta", "opera": "Il Barbiere di Siviglia", "composer": "Rossini" },
-    { "role": "Anna Gomez", "opera": "The Consul", "composer": "Menotti" },
-    { "role": "Miss Titmouse", "opera": "Too Many Sopranos", "composer": "Penhorwood" },
-    { "role": "Carollina", "opera": "Il Matrimonio Segreto", "composer": "Cimarosa" }
+    {
+      "role": "Adina",
+      "opera": "L'elisir d'amore",
+      "composer": "Donizetti"
+    },
+    {
+      "role": "Norina",
+      "opera": "Don Pasquale",
+      "composer": "Donizetti"
+    },
+    {
+      "role": "Lakmé",
+      "opera": "Lakmé",
+      "composer": "Delibes"
+    },
+    {
+      "role": "Zerlina",
+      "opera": "Don Giovanni",
+      "composer": "Mozart"
+    },
+    {
+      "role": "Susanna",
+      "opera": "Le nozze di Figaro",
+      "composer": "Mozart"
+    },
+    {
+      "role": "Pamina",
+      "opera": "Die Zauberflöte",
+      "composer": "Mozart"
+    },
+    {
+      "role": "Papagena",
+      "opera": "Die Zauberflöte",
+      "composer": "Mozart"
+    },
+    {
+      "role": "Sister Constance",
+      "opera": "Les Dialogues des Carmélites",
+      "composer": "Poulenc"
+    },
+    {
+      "role": "Lisette",
+      "opera": "La Rondine",
+      "composer": "Puccini"
+    },
+    {
+      "role": "Berta",
+      "opera": "Il Barbiere di Siviglia",
+      "composer": "Rossini"
+    },
+    {
+      "role": "Anna Gomez",
+      "opera": "The Consul",
+      "composer": "Menotti"
+    },
+    {
+      "role": "Miss Titmouse",
+      "opera": "Too Many Sopranos",
+      "composer": "Penhorwood"
+    },
+    {
+      "role": "Carollina",
+      "opera": "Il Matrimonio Segreto",
+      "composer": "Cimarosa"
+    }
   ]
 }
