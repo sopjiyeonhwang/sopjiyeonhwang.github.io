@@ -46,7 +46,7 @@
         <div class="inner">
           <div>
             <div class="brand-name">${site?.name || 'Dr. Jiyeon Hwang'}</div>
-            <p class="brand-tag">${site?.tagline || 'Lyric Coloratura Soprano · Assistant Professor of Voice & Choir at Texas A&M International University.'}</p>
+            <p class="brand-tag">${(site?.tagline || 'Lyric Coloratura Soprano · Assistant Professor of Voice & Choir at Texas A&M International University.').replace(/\n/g, '<br>')}</p>
           </div>
           <div>
             <h4>Navigate</h4>
