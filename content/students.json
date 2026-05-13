@@ -1,9 +1,9 @@
 {
   "testimonials": [
     {
-      "youtube_id": "dQw4w9WgXcQ",
-      "student_name": "Student Name 1",
-      "description": "Short description of their journey or success"
+      "youtube_id": "https://youtu.be/jWXxPNvCWqU?si=gnz6GQqhGixp_KGg",
+      "student_name": "Cristian Lopez",
+      "description": "Soprano  "
     },
     {
       "youtube_id": "dQw4w9WgXcQ",
@@ -18,28 +18,10 @@
   ],
   "student_achievements": [
     {
-      "year": "2024",
-      "student": "Jihye Lee",
-      "achievement": "Musical Actress",
-      "context": "Film: Parasite (dir. Bong Joon-ho, Oscar-winning 2020) · Apple TV+ Pachinko (opera singer role, 2022) · Musical theatre coaching: Werther, Monte Christo, Phantom, Anna Karenina, Rebecca"
-    },
-    {
       "year": "2021",
       "student": "Joy Kim",
       "achievement": "M.M. Voice Performance",
       "context": "Indiana University Bloomington — Jacobs School of Music · Also accepted with scholarship: Manhattan School of Music, New England Conservatory"
-    },
-    {
-      "year": "2020",
-      "student": "Hosuk Lee",
-      "achievement": "TV Drama Actor",
-      "context": "Coaching for musical performance and TV drama acting"
-    },
-    {
-      "year": "2018",
-      "student": "Jimin Kim",
-      "achievement": "TV Drama Actress",
-      "context": "Admitted to Chung-Ang University Acting School (B.A.) — top-level drama and acting school in Korea"
     }
   ]
 }
