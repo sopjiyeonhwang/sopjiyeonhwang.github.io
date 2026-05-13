@@ -19,15 +19,15 @@
   "student_achievements": [
     {
       "year": "2026",
-      "student": "Leslie Coronado",
-      "achievement": "NATS Competition (South Texas Chapter) 4nd Prize ",
-      "context": "Highest score in Semi-final"
-    },
-    {
-      "year": "2026",
       "student": "Jared Garcia Lopez",
       "achievement": "Acceptance from Manhattan School of Music (M.M Degree Program) with scholarship ",
       "context": "He got acceptances from several top Conservatory, and University for M.M with full scholarship with stipend"
+    },
+    {
+      "year": "2026",
+      "student": "Jeeyeon Park",
+      "achievement": "Acceptance from Manhattan School of Music (M.M Degree Program) with scholarship ",
+      "context": "Accepted into the Master of Music degree program in Voice Performance with merit-based scholarship support. Also, she got several music schools, and universities with 70% scholarship."
     },
     {
       "year": "2026 ",
@@ -36,16 +36,16 @@
       "context": "Hightest Semi-final"
     },
     {
+      "year": "2026",
+      "student": "Leslie Coronado",
+      "achievement": "NATS Competition (South Texas Chapter) 4nd Prize ",
+      "context": "Highest score in Semi-final"
+    },
+    {
       "year": "2021",
       "student": "Joy Kim",
       "achievement": "M.M. Voice Performance",
       "context": "Indiana University Bloomington — Jacobs School of Music · Also accepted with scholarship: Manhattan School of Music, New England Conservatory"
-    },
-    {
-      "year": "2026",
-      "student": "Jeeyeon Park",
-      "achievement": "Acceptance from Manhattan School of Music (M.M Degree Program) with scholarship ",
-      "context": "Accepted into the Master of Music degree program in Voice Performance with merit-based scholarship support. Also, she got several music schools, and universities with 70% scholarship."
     }
   ]
 }
