@@ -1,25 +1,11 @@
 {
   "upcoming": [
     {
-      "role": "Guest Artist Series ",
-      "date": "2027-03-15T00:00:00.000-05:00",
-      "title": "Recital & Masterclass",
-      "venue": "University of Tampa",
-      "city": "Tampa, Florida"
-    },
-    {
-      "role": "Art song recital",
-      "date": "2026-10-12T00:00:00.000-05:00",
-      "title": "Korean Art song Concert ",
-      "venue": "University of Oklahoma museum ",
-      "city": "Norman "
-    },
-    {
-      "date": "2026-10-02T00:00:00.000-05:00",
-      "title": "TAMIU International Music Festival",
-      "role": "Voice Master Class",
-      "venue": "Texas A&M International University",
-      "city": "Laredo, Texas",
+      "date": "2026-06-29T00:00:00.000-05:00",
+      "title": "Borderlands: Songs of Longing and Return ",
+      "role": "Recital",
+      "venue": "Chung-Ang University",
+      "city": "Seoul, South Korea",
       "ticket_url": ""
     },
     {
@@ -30,12 +16,26 @@
       "city": "Laredo, Texas"
     },
     {
-      "date": "2026-06-29T00:00:00.000-05:00",
-      "title": "Borderlands: Songs of Longing and Return ",
-      "role": "Recital",
-      "venue": "Chung-Ang University",
-      "city": "Seoul, South Korea",
+      "date": "2026-10-02T00:00:00.000-05:00",
+      "title": "TAMIU International Music Festival",
+      "role": "Voice Master Class",
+      "venue": "Texas A&M International University",
+      "city": "Laredo, Texas",
       "ticket_url": ""
+    },
+    {
+      "role": "Art song recital",
+      "date": "2026-10-12T00:00:00.000-05:00",
+      "title": "Korean Art song Concert ",
+      "venue": "University of Oklahoma museum ",
+      "city": "Norman "
+    },
+    {
+      "role": "Guest Artist Series ",
+      "date": "2027-03-15T00:00:00.000-05:00",
+      "title": "Recital & Masterclass",
+      "venue": "University of Tampa",
+      "city": "Tampa, Florida"
     }
   ],
   "past": [
